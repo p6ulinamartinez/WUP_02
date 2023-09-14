@@ -32,15 +32,22 @@ veggy <- cabbages
 ## Descriptive Results
 
 ### Graphical Descriptive Results
-
+```{r}
+plot(VitC~Cult,data= veggy, main="Vitaim-C Contents by Cultivation method")
+```
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
-
+```{r}
+favstats(VitC~Cult,data=veggy)
+```
+The data Shows that Q3 of C39 is smaller than Q1 of C52 indicating that they are indeed disjoint
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
-
+```{r}
+t.test(VitC~Cult,data=veggy)
+```
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
